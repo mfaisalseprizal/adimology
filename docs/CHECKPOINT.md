@@ -18,13 +18,10 @@ Pastikan file di dalam folder ekstensi sudah diubah (bukan lagi file `.example`)
 Pastikan tabel sudah terbentuk di dashboard Supabase (Menu **Table Editor**):
 
 - Cek apakah tabel-tabel berikut sudah ada:
-  - `analysis_history`
-  - `emiten_list`
-  - `stockbit_tokens`
-  - `watchlist`
-  - `watchlist_history`
-- Jika tabel tidak ada, ulangi langkah **A1 No. 4** (Jalankan script `000_init.sql` di SQL Editor).
 ![Supabase Setup](https://raw.githubusercontent.com/bhaktiutama/adimology/main/public/checkpoint01.png)
+- Jika tabel tidak ada, ulangi langkah **A1 No. 4** (Jalankan script `000_init.sql` di SQL Editor).
+- Redeploy Netlify.
+![Supabase Setup](https://raw.githubusercontent.com/bhaktiutama/adimology/main/public/checkpoint05.png)
 
 ## 3. Environment Variables (Netlify)
 Pastikan di dashboard Netlify (**Project configuration > Environment variables**) variabel berikut sudah benar dan tidak ada typo:
@@ -37,10 +34,10 @@ Pastikan di dashboard Netlify (**Project configuration > Environment variables**
 | `GEMINI_API_KEY` | Harus valid dari Google AI Studio |
 | `CRON_SECRET` | Bebas, tapi pastikan tidak kosong |
 
-## 4. Cara Verifikasi Manual
-1. Buka Extension di Chrome.
+## 4. Verifikasi Chrome Extension
+1. Buka Extension di Chrome chrome://extensions/
 2. Klik Service Worker.
 ![Supabase Setup](https://raw.githubusercontent.com/bhaktiutama/adimology/main/public/checkpoint04.png)
-4. Jika ekstensi bekerja, Anda akan melihat log seperti: `Token successfully synced to API.`.
+3. Jika ekstensi bekerja, Anda akan melihat log seperti: `Token successfully synced to API.`.
 ![Supabase Setup](https://raw.githubusercontent.com/bhaktiutama/adimology/main/public/checkpoint03.png)
-5. Jika ada error merah, silakan screenshot dan tanyakan di group/issue.
+4. Jika ada error merah, silakan screenshot dan tanyakan di group/issue.
